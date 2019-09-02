@@ -7,3 +7,15 @@ const produceDrivingRange = range =>
       return `${distance - range} blocks out of range`
     }
   }
+
+  const produceTipCalculator = percent => fare => fare * percent;
+
+  const createDriver = () => {
+    let driverId = 0;
+    return class {
+      constructor(name){
+        this.name = name;
+        this.id = ++driverId;
+      }
+    }
+  }
