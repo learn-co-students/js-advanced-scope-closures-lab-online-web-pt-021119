@@ -1,19 +1,16 @@
 function produceDrivingRange(range){
-  return function(start, end){
+  return function(start, end) {
     const distance = Math.abs(parseInt(start) - parseInt(end));
-    if(distance > range){
+    if(distance > range) {
       return `${distance - range} blocks out of range`
-    }else{
+    } else {
       return `within range by ${range - distance}`
     }
-
   }
 }
 
 function produceTipCalculator(tipAmount){
-  return function(billAmount){
-    return billAmount * tipAmount;
-  }
+  return billAmount => billAmount * tipAmount;
 }
 
 function createDriver(){
